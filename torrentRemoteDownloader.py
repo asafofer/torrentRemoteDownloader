@@ -34,4 +34,5 @@ while True:
                 imapObj.delete_messages(UID) # delete command mail to prevent it from preforming it again
                 smtpObj.sendmail(bot_mail,my_mail,'Subject:Torrent status\nStarted downloading')
                 print('Done Processing. Sleeping for 15 minutes')
-                time.sleep(15*60)
+    smtpObj.quit()            
+    time.sleep(15*60)
